@@ -1,0 +1,50 @@
+{
+  "name": "jcpunk-hosts",
+  "version": "0.1.0",
+  "author": "riehecky@fnal.gov",
+  "summary": "Yet another /etc/hosts management module (but with clear dual stack bits) ",
+  "license": "Apache-2.0",
+  "source": "https://github.com/jcpunk/puppet-hosts.git",
+  "project_page": "https://github.com/jcpunk/puppet-hosts",
+  "issues_url": "https://github.com/jcpunk/puppet-hosts/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 8.0.0 < 9.0.0"
+    },
+    {
+      "name": "puppetlabs/concat",
+      "version_requirement": ">= 7.0.0 < 8.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "10"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 6.21.0 < 8.0.0"
+    }
+  ],
+  "pdk-version": "2.5.0",
+  "template-url": "pdk-default#2.5.0",
+  "template-ref": "tags/2.5.0-0-g369d483"
+}

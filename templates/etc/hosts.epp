@@ -1,0 +1,22 @@
+<%- |
+  Hash $entries = {}
+| -%>
+##############################################################################
+#
+# This file managed by Puppet - DO NOT EDIT
+#
+##############################################################################
+# Expected defaults
+127.0.0.1  localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1        localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+##############################################################################
+# Added via hosts::add_entries
+<% $entries.keys.sort.each | $hostname | { -%>
+<%   if $entries[$hostname]['ipv4'] { -%>
+<%= $entries[$hostname]['ipv4'] %>  <%= $hostname %><% if $entries[$hostname]['aliases'] { %> <%= $entries[$hostname]['aliases'].join(' ') %><% } if $entries[$hostname]['comment'] { %> # <%= $entries[$hostname]['comment'] %><% } %>
+<%   } -%>
+<%   if $entries[$hostname]['ipv6'] { -%>
+<%= $entries[$hostname]['ipv6'] %>  <%= $hostname %><% if $entries[$hostname]['aliases'] { %> <%= $entries[$hostname]['aliases'].join(' ') %><% } if $entries[$hostname]['comment'] { %> # <%= $entries[$hostname]['comment'] %><% } %>
+<%   } -%>
+<% } -%>
