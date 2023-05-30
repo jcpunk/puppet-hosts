@@ -1,6 +1,6 @@
 {
   "name": "jcpunk-hosts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "riehecky@fnal.gov",
   "summary": "Yet another /etc/hosts management module (but with clear dual stack bits) ",
   "license": "Apache-2.0",
@@ -10,7 +10,7 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 8.0.0 < 9.0.0"
+      "version_requirement": ">= 8.0.0 < 10.0.0"
     },
     {
       "name": "puppetlabs/concat",
